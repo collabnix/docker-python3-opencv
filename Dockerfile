@@ -18,9 +18,10 @@ RUN apt-get update \
         libtiff-dev \
         libavformat-dev \
         libpq-dev \
+        vim \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install numpy
+RUN pip install numpy kafka-python flask
 
 WORKDIR /
 ENV OPENCV_VERSION="4.1.0"
