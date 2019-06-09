@@ -19,6 +19,7 @@ RUN apt-get update \
         libavformat-dev \
         libpq-dev \
         vim \
+        git \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install numpy kafka-python flask
@@ -52,4 +53,5 @@ RUN wget https://github.com/opencv/opencv/archive/${OPENCV_VERSION}.zip \
 RUN ln -s \
   /usr/local/python/cv2/python-3.7/cv2.cpython-37m-x86_64-linux-gnu.so \
   /usr/local/lib/python3.7/site-packages/cv2.so
-RUN wget https://github.com/collabnix/pico 
+RUN git clone https://github.com/collabnix/pico \
+    cd pico
