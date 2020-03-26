@@ -1,5 +1,4 @@
 FROM python:3.7
-MAINTAINER Josip Janzic <josip@jjanzic.com>
 
 RUN apt-get update \
     && apt-get install -y \
